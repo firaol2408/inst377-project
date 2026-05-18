@@ -45,6 +45,8 @@ and making sure that the tables get populated. Also use insomnia for mock api ca
 the api works.
 
 API Endpoints
+- NBA_GO API: https://api.server.nbaapi.com/swagger/index.html
+
 1. GET '/api/searches' (gets searches from database)
 2. POST '/api/searches' (records searches in the database)
 2. GET'/api/player/:playerId' (gets data from the NBA_GO api)
