@@ -1,0 +1,194 @@
+<html>
+
+<head>
+    <title>Player Lookup</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"/>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+
+<body>
+    <nav class="navbar">
+        <h1>NBA Player Comparison</h1>
+        <ul class="nav-links">
+            <li><a href="Mainpg.html" class="active">Home</a></li>
+            <li><a href="about.html">About</a></li>
+        </ul>
+    </nav>
+
+    <h2>Player Lookup</h2>
+    <section class="search-section">
+            <div class="player-search">
+                <label for="player1Search">Player 1</label>
+                <input type="text" id="player1Search" placeholder="Search player">
+                <button onclick="searchPlayer(1)">Search</button>
+                <p id="player1Name" class="selected-player">No player selected</p>
+            </div>
+
+            <div class="player-search">
+                <label for="player2Search">Player 2</label>
+                <input type="text" id="player2Search" placeholder="Search player">
+                <button onclick="searchPlayer(2)">Search</button>
+                <p id="player2Name" class="selected-player">No player selected</p>
+            </div>
+        </section>
+
+<section class="table-section">
+            <table class="stat-table">
+                <thead>
+                    <tr>
+                        <th>Stat</th>
+                        <th id="player1">Player 1</th>
+                        <th id="player2">Player 2</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>PTS</td>
+                        <td id="pts1">-</td>
+                        <td id="pts2">-</td>
+                    </tr>
+                    <tr>
+                        <td>REB</td>
+                        <td id="reb1">-</td>
+                        <td id="reb2">-</td>
+                    </tr>
+                    <tr>
+                        <td>AST</td>
+                        <td id="ast1">-</td>
+                        <td id="ast2">-</td>
+                    </tr>
+                    <tr>
+                        <td>BLK</td>
+                        <td id="blk1">-</td>
+                        <td id="blk2">-</td>
+                    </tr>
+                    <tr>
+                        <td>STL</td>
+                        <td id="stl1">-</td>
+                        <td id="stl2">-</td>
+                    </tr>
+                    <tr>
+                        <td>FG%</td>
+                        <td id="fg1">-</td>
+                        <td id="fg2">-</td>
+                    </tr>
+                    <tr>
+                        <td>3P%</td>
+                        <td id="3p1">-</td>
+                        <td id="3p2">-</td>
+                    </tr>
+                    <tr>
+                        <td>FT%</td>
+                        <td id="ft1">-</td>
+                        <td id="ft2">-</td>
+                    </tr>
+                    <tr>
+                        <td> <strong>Advanced Stats</strong></td>
+                    </tr>
+                    <tr>
+                        <td>PER</td>
+                        <td id="per1">-</td>
+                        <td id="per2">-</td>
+                    </tr>
+                    <tr>
+                        <td>BPM</td>
+                        <td id="bpm1">-</td>
+                        <td id="bpm2">-</td>
+                    </tr>
+                    <tr>
+                        <td>VORP</td>
+                        <td id="vorp1">-</td>
+                        <td id="vorp2">-</td>
+                    </tr>
+                    <tr>
+                        <td>TS%</td>
+                        <td id="ts1">-</td>
+                        <td id="ts2">-</td>
+                    </tr>
+                    <tr>
+                        <td>Win Shares</td>
+                        <td id="ws1">-</td>
+                        <td id="ws2">-</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+<section class="swiper-section">
+
+    <h2>Advanced Stat Explanations</h2>
+
+    <div class="swiper statSwiper">
+
+        <div class="swiper-wrapper">
+
+            <div class="swiper-slide">
+                <h3>PER</h3>
+                <p>
+                    Player Efficiency Rating measures a player's overall
+                    per-minute productivity. League average is typically 15.
+                </p>
+            </div>
+
+            <div class="swiper-slide">
+                <h3>VORP</h3>
+                <p>
+                    Value Over Replacement Player estimates how much value
+                    a player provides compared to a replacement-level player.
+                </p>
+            </div>
+
+            <div class="swiper-slide">
+                <h3>BPM</h3>
+                <p>
+                    Box Plus Minus estimates a player's impact on team
+                    performance per 100 possessions.
+                </p>
+            </div>
+
+            <div class="swiper-slide">
+                <h3>TS%</h3>
+                <p>
+                    True Shooting Percentage measures scoring efficiency,
+                    including free throws and three-pointers.
+                </p>
+            </div>
+
+            <div class="swiper-slide">
+                <h3>Win Shares</h3>
+                <p>
+                    Win Shares estimates the number of team wins contributed
+                    by a player throughout a season.
+                </p>
+            </div>
+
+        </div>
+
+        <div class="swiper-pagination"></div>
+
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+
+    </div>
+
+    </section>
+
+    <section class="chart-section">
+        <h2>Advanced Stat Comparison: Impact stats</h2>
+        <p> Who is the most impactful player? BPM, VORP, and PER are the key metrics for evaluating player impact.
+            Enter both players to see them compared in a chart.
+        </p>
+        <canvas id="statsChart"></canvas>
+
+    </section>
+
+
+
+<script src="Mainpg.js" defer></script> 
+</body>
+
+</html>
