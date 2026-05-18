@@ -15,7 +15,7 @@ const supabaseKey = process.env.SUPABASE_KEY;
 const supabase = supabaseClient.createClient(supabaseUrl, supabaseKey);
 
 app.get('/', (req, res) => {
-    res.sendFile('public/Mainpg.html', { root: __dirname });
+    res.sendFile('public/home.html', { root: __dirname });
 });
 
 app.get('/api/searches', async (req, res) => {
