@@ -22,8 +22,8 @@ Required Software and Tools:
 - supabase
 
 Create a .env file in the root of the project and put this inside:
-    SUPABASE_URL= link to the supabase project
-    SUPABASE_KEY= key from supabase project(in settings)
+- SUPABASE_URL= link to the supabase project
+- SUPABASE_KEY= key from supabase project(in settings)
 
 Running the Application
 Locally:
@@ -34,11 +34,11 @@ Then open your browser and go to:
 http://localhost:3000
 
 On Vercel:
-Link the git repo and a vercel project, and can open it on the main page
+- Link the git repo and a vercel project, and can open it on the main page
 
 
 Running Tests
-I don't have any tests currently, but manually testing can be done by:
+- I don't have any tests currently, but manually testing can be done by:
 
 Running the server locally and searching for a known NBA player (e.g. "LeBron James")
 and making sure that the tables get populated. Also use insomnia for mock api calls to make sure
@@ -47,7 +47,7 @@ the api works.
 API Endpoints
 1. GET '/api/searches' (gets searches from database)
 2. POST '/api/searches' (records searches in the database)
-2. GET'/api/player/:playerId' (gets data from external api)
+2. GET'/api/player/:playerId' (gets data from the NBA_GO api)
 
 
 Known Bugs
